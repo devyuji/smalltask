@@ -1,6 +1,6 @@
 # SmallTask - Take small steps to achieve big things.
 
-A simple list type task manager app. Create 5 small tasks with a time limit default is 60 min. You can change time on setting page. A start completing those tasks within a time limit.
+A simple list type task manager app. Create 5 small tasks with a time limit default is 60 min. You can change time on setting page and start completing those tasks within a time limit.
 
 ## Try out the app
 
