@@ -93,51 +93,53 @@ class _AddNewTaskModalState extends State<AddNewTaskModal> {
     return Container(
       height: size.height / 1.1,
       padding: const EdgeInsets.all(kDefaultPadding),
-      child: Column(
-        children: <Widget>[
-          const UnderlineText(text: "Add new task"),
-          const SizedBox(height: kDefaultPadding * 2),
-          TextField(
-            maxLength: 150,
-            maxLines: null,
-            autocorrect: true,
-            autofocus: true,
-            controller: _textController,
-            focusNode: _inputFocusNode,
-            cursorColor: Colors.black,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(kDefaultPadding),
-                borderSide: BorderSide(color: Colors.yellow.shade700),
-              ),
-              hintText: "Enter your task..",
-            ),
-          ),
-          const SizedBox(height: kDefaultPadding),
-          GestureDetector(
-            onTap: _save,
-            child: Box(
-              child: Padding(
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    Icon(Icons.save_rounded),
-                    SizedBox(width: kDefaultPadding),
-                    Text(
-                      "Save",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
-                  ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            const UnderlineText(text: "Add new task"),
+            const SizedBox(height: kDefaultPadding * 2),
+            TextField(
+              maxLength: 150,
+              maxLines: null,
+              autocorrect: true,
+              autofocus: true,
+              controller: _textController,
+              focusNode: _inputFocusNode,
+              cursorColor: Colors.black,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(kDefaultPadding),
+                  borderSide: BorderSide(color: Colors.yellow.shade700),
                 ),
+                hintText: "Enter your task..",
               ),
-              shadowColor: Colors.black,
             ),
-          ),
-          const SizedBox(height: kDefaultPadding * 2),
-        ],
+            const SizedBox(height: kDefaultPadding),
+            GestureDetector(
+              onTap: _save,
+              child: Box(
+                child: Padding(
+                  padding: const EdgeInsets.all(kDefaultPadding),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      Icon(Icons.save_rounded),
+                      SizedBox(width: kDefaultPadding),
+                      Text(
+                        "Save",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.black,
+              ),
+            ),
+            const SizedBox(height: kDefaultPadding * 2),
+          ],
+        ),
       ),
     );
   }

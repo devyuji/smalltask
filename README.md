@@ -1,6 +1,6 @@
-# SmallTask
+# SmallTask - Take small steps to achieve big things.
 
-Take small steps to achieve big things.
+A simple list type task manager app. Create 5 small tasks with a time limit default is 60 min. You can change time on setting page. A start completing those tasks within a time limit.
 
 ## Try out the app
 
@@ -8,7 +8,7 @@ Take small steps to achieve big things.
 
 **A feedback would be appreciated**
 
-## Screenshots
+## Screenshot
 
 ![](/assets/images/github_cover.png)
 

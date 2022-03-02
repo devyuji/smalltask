@@ -55,52 +55,53 @@ class _EditModalState extends State<EditModal> {
     return Container(
       height: size.height / 1.1,
       padding: const EdgeInsets.all(kDefaultPadding),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const UnderlineText(text: "Edit task"),
-          const SizedBox(height: kDefaultPadding * 2),
-          TextField(
-            maxLength: 150,
-            maxLines: null,
-            autofocus: true,
-            controller: _textEditingController,
-            cursorColor: Colors.black,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderSide: const BorderSide(
-                  color: kPrimaryColor,
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            const UnderlineText(text: "Edit task"),
+            const SizedBox(height: kDefaultPadding * 2),
+            TextField(
+              maxLength: 150,
+              maxLines: null,
+              autofocus: true,
+              controller: _textEditingController,
+              cursorColor: Colors.black,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: kPrimaryColor,
+                  ),
+                  borderRadius: BorderRadius.circular(kDefaultPadding),
                 ),
-                borderRadius: BorderRadius.circular(kDefaultPadding),
+                hintText: "Enter your task..",
               ),
-              hintText: "Enter your task..",
             ),
-          ),
-          const SizedBox(height: kDefaultPadding),
-          GestureDetector(
-            onTap: _edit,
-            child: Box(
-              child: Padding(
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    Icon(Icons.edit_rounded),
-                    SizedBox(width: kDefaultPadding),
-                    Text(
-                      'Edit',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
-                  ],
+            const SizedBox(height: kDefaultPadding),
+            GestureDetector(
+              onTap: _edit,
+              child: Box(
+                child: Padding(
+                  padding: const EdgeInsets.all(kDefaultPadding),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      Icon(Icons.edit_rounded),
+                      SizedBox(width: kDefaultPadding),
+                      Text(
+                        'Edit',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
+                shadowColor: Colors.black,
               ),
-              shadowColor: Colors.black,
             ),
-          ),
-          const SizedBox(height: kDefaultPadding * 2)
-        ],
+            const SizedBox(height: kDefaultPadding * 2)
+          ],
+        ),
       ),
     );
   }

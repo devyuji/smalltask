@@ -163,7 +163,7 @@ class Settings extends StatelessWidget {
                           showAboutDialog(
                             context: context,
                             applicationIcon:
-                                SvgPicture.asset('assets/icons/logo.svg'),
+                                Image.asset('assets/images/icon.png'),
                             applicationName: "SmallTask",
                             applicationVersion: "1.0.0",
                             applicationLegalese:
